@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .flames import flames
+from .models import name
 
 # Create your views here.
 def home_view(request, *args, **kwargs):
@@ -9,6 +10,8 @@ def name_bg(request, *args, **kwargs):
 
     name1 = request.GET.get('name1')
     name2 = request.GET.get('name2')
+    newName = name.objects.create(first_name=name1, second_name=name2)
+    newName.save()
     prediction = flames(name1, name2)
 
     context = {

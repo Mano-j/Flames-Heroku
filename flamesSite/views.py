@@ -10,9 +10,9 @@ def name_bg(request, *args, **kwargs):
 
     name1 = request.GET.get('name1')
     name2 = request.GET.get('name2')
-    newName = name.objects.create(first_name=name1, second_name=name2)
-    newName.save()
     prediction = flames(name1, name2)
+    newName = name.objects.create(first_name=name1, second_name=name2, prediction=prediction)
+    newName.save()
 
     context = {
         'n1' : name1.capitalize(),

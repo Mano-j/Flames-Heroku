@@ -6,32 +6,28 @@
     <link rel="shortcut icon" type="image/png" href="/static/img/favicon.ico"/>
     <title>Superman.</title>
     <style>
+
         body{
-            padding-top: 50px;
+            padding-top: 2%;
             color: white;
             text-align: centre;
             font-family: "Lucida Console", Monaco, monospace;
         }
 
-        #centre{
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
         label{
             display:inline-block;
+        }
 
-        }
         input{
-            display:block;
+            /*position: relative;*/
+            display: block;
             border-radius: 5px 5px 5px 5px;
-            padding: 5px;
-            margin-right: 150px;
+            padding: 5%;
+            margin-right: 20px;
         }
+
         #submit{
-            margin-left: 200px;
+            margin-left: 35%;
             padding: 5px 20px 5px 20px;
         }
 
@@ -39,14 +35,18 @@
             position: relative;
             text-align: center;
         }
+
         #box{
+
+            display: inline-block;
+
             position: absolute;
-            top: 5cm;
-            left: 8cm;
-            right: 8cm;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             border: solid 2px white;
             border-radius: 20px 20px 10px 20px;
-            padding: 30px;
+            padding: 2%;
             background: rgb(1, 1, 1); /* Fallback color */
             background: rgba(1, 1, 1, 0.5); /* Black background with 0.5 opacity */
             color: #f1f1f1;
@@ -60,6 +60,7 @@
         }
 
         #boxcontent{
+            position: relative;
             padding-left: 20%
         }
 
